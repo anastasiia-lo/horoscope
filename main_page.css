@@ -1,0 +1,245 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(240, 248, 255);
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: rgba(0, 0, 0); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    z-index: 1000; /* Переміщує меню поверх інших елементів */
+}
+
+.first_ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.first_li {
+    display: inline-block; /* Розташовує елементи списку в рядок */
+}
+
+.first_a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px; 
+    margin-right: 15px;
+    text-align: center;
+    border-radius: 20px;
+    color: rgb(240, 248, 255);
+    transition: background-color 0.3s ease;
+}
+
+.first_a:hover {
+    background-color: rgb(125, 144, 227);
+}
+
+.left-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 25px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    opacity: 0; /* невидимий*/
+    transition: opacity 0.6s ease-in-out;
+}
+
+.left-bar.is-visible {
+    opacity: 1;
+}
+
+.letter_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letter {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+/* Стилі для фонового зображення */
+.navigation_on_foto {
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../horoscope/img/1.jpg");
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 10px lightcyan;
+    background-attachment: fixed; /* ВОНО*/
+}
+
+.navigation_on_foto h1:nth-child(2) {
+    margin-right: -175px; /* Переміщує другий рядок */
+}
+
+/* Відступ для основного контенту, щоб він не наїжджав на бічну панель */
+main {
+    margin-left: 50px; 
+	margin-right: 50px; 
+    padding: 20px;
+}
+
+/* Стилі для футера */
+.main-footer {
+    background-color: rgb(0, 0, 0);
+    height: 100px;
+}
+
+
+.container {
+	background: rgb(0, 10, 57);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 80dvh;
+	padding: 15px; 
+}
+
+.category_container {
+	--gap: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap; /*!!!!!!!!!!!*/
+	gap: calc(var(--gap) * 2);
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	--active: 0;
+	cursor: pointer; /* нова мишка*/
+	overflow: hidden;
+	position: relative;
+	z-index: 500;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1.5rem;
+	padding: 2.5rem;
+	width: calc((100% / 3) - var(--gap));
+	height: 90%;
+	border-radius: 1em;
+	transition: width 0.5s ease-in-out;
+}
+
+.content:hover {
+	--active: 1;
+	width: calc(70% - var(--gap));
+}
+
+.content::before {
+	content: "";
+	position: absolute;
+	z-index: -10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark);
+	opacity: 0.6;
+}
+
+.content img {
+	position: absolute;
+	z-index: -20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.content .zz_image {
+	opacity: calc(1 - var(--active));
+	transition: opacity 0.3s ease-in-out;
+}
+
+.profile_zz {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 12rem; /*!!*/
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+}
+
+.profile_zz span {
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: white;
+	text-wrap: nowrap;
+}
+
+.profile_zz p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 20rem;
+  color: white;
+}
+
+.profile_znak {
+	width: 35rem;
+	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+}
+
+.profile_znak p {
+	font-size: 1rem;
+	font-weight: 300;
+	color: white;
+	transform: translate(0, calc((1 - var(--active)) * (100% + 1.5rem)));
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
+}
+
+
+.wrapper {
+	display: grid;
+  	grid-template-rows: 0fr;
+  	overflow: hidden;
+	transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
+}
+
+.profile_znak { 
+	min-height: 0; 
+	transform: translateY(50%);
+	opacity: 0;
+	transition: 
+	opacity 0.8s ease-in-out,
+	transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;	
+}
+
+.content:hover .wrapper {
+  	grid-template-rows: 1fr;
+}
+
+.content:hover .profile_znak {
+	transform: none;
+	opacity: 1;	
+}
+
+

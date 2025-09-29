@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your horoscope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main_page.css">
+</head>
+
+<body>
+
+    <header class="menu">
+
+        <div>
+            <img src="../horoscope/img/logo.png" alt="LogoDemchenko&Livandovska" height="50px">
+        </div>
+
+        <div class="menu-container">
+            <ul class="first_ul">
+                <li class="first_li"><a class="first_a" href="#main_txt">Вступ</a></li>
+                <li class="first_li"><a class="first_a" href="#zz_znak">Дізнайся</a></li>
+                <li class="first_li"><a class="first_a" href="#love">Сумісність</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <aside class="left-bar">
+        <div class="letter_text">
+            <div class="letter">T</div>
+            <div class="letter">H</div>
+            <div class="letter">E</div>
+            <div class="letter">S</div>
+            <div class="letter">T</div>
+            <div class="letter">A</div>
+            <div class="letter">R</div>
+            <div class="letter">S</div>
+            <div class="letter">A</div>
+            <div class="letter">R</div>
+            <div class="letter">E</div>
+            <div class="letter">Y</div>
+            <div class="letter">O</div>
+            <div class="letter">U</div>
+        </div>
+    </aside>
+
+    <script>
+        // Знаходимо елемент
+        const leftBar = document.querySelector('.left-bar');
+    
+        function handleScroll() {
+        
+           const scrollThreshold = 520; // рахуємо з верху
+
+            if (document.documentElement.scrollTop > scrollThreshold) {
+
+                leftBar.classList.add('is-visible');
+
+            } else {
+           
+                leftBar.classList.remove('is-visible');
+            }
+        }
+
+       window.addEventListener('scroll', handleScroll);
+    
+       // на випадок, якщо сторінка завантажилась вже прокрученою
+       handleScroll();
+
+    </script>
+
+    <section class="navigation_on_foto">
+        <h1 style="font-size: 60px;"> NOT just a sign </h1>
+        <h1 style="font-size: 80px;"> it's YOU</h1>
+        <div id="main_txt"></div>
+    </section>
+
+    <main>
+        
+
+       <div >
+            <p style="text-align: justify; font-size: 1.5rem;">
+              &nbsp &nbsp У світі приблизно 8 міліонів людей, і кожен по своєму неповторний та  особливий. Ми всі різні, і саме ця різноманітність робить світ захоплюючим. Недарма у кожного з нас є знак зодіаку, адже саме він надає заздалегідь детальну інформацію про характер, цілі та спосіб нашого життя.   Але за допомогою цього ми можемо не лише дізнатися про себе, але й про інших оточуючих людей, просто потрібно з'ясувати їхій знак зодіаку і все. 
+              <br><br> &nbsp &nbsp На цій сторінці Ви знайдете цікаву інформацію про кожен знак зодіаку та навіть зможете перевірити Вашу сумісність із коханою людиною заздалегідь. Тому заглиблюйтеся в астологію і дізнавайтеся більше про себе та оточуючих Вас людей!
+            </p>
+       </div>
+
+        <section class="container" id="zz_znak">
+
+	        <div class="category_container">
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/ter.jpg" class="zz_image" alt="" />
+
+			        <div class="profile_zz">
+
+				        <span>Терези</span>
+
+                        <p>
+                            Девіз: "Людина без прємних манер, як автомобіль без бензину..."
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					      <p>
+                            У народжених під сузір'ям Терезів добре серце, мрійлива натура, спокійний характер, вони потребують
+                            гармонії і спокою, не терплять конфліктів і тому завжди проявляють свою стриманість та дипломатичність.
+                          </p>
+
+				        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/bl.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				        <span>Близнюки</span>
+
+                        <p>
+                            Девіз: "Немає такої ситуації, з якої не можна викрутитися".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">			
+
+				        <div class="profile_znak">
+                            
+					      <p>
+                            Близнюки можуть подати будь-яку ситуацію так, ніби все зробили абсолютно правильно і 
+                            переконати їх у протилежному неможливо. Під цим знаком криється добра і ввічлива людина 
+                            з легким характером, діяльна, спритна, винахідлива і граціозна.
+                          </p>
+				        
+                        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			        <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/vod.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				       <span>Водолій</span>
+
+                        <p>
+                            Девіз: "Немає за мене добрішого, немає за мене бодрішого".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					       <p>
+                            Дружелюбність, щедрість, старанність - це якості, якими можна описати Водолія. Представники цьго знаку
+                            обожнюють таємниці, їм подобається пізнавати нових, цікавих людей, але вони дуже волелюбні, тому не
+                            варто претендувати на роль єдиного друга. Водолії - оригінальні, смішні, незалежні, дипломатичні, 
+                            проникливі, боязкі і ніжні.
+                           </p>
+
+				        </div>
+                        
+			        </div>
+
+		        </div>
+
+	        </div>
+
+        </section>
+
+         <section class="container">
+
+	        <div class="category_container">
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/fish.jpg" class="zz_image" alt="" />
+
+			        <div class="profile_zz">
+
+				        <span>Риби</span>
+
+                        <p>
+                            Девіз: "Не відкладай на завтра те, що можна зробити післязавтра...".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					      <p>
+                            Представники цього знаку - хороші учні, тому що вони сприятливі і скромні. Шановані, володіють великим 
+                            впливом на інших і користуються успіхом у протилежнії статі. У них чудова інтуїція, розвинений внутрішній
+                            світ, але їх важко зрозуміти до кінця. Риби легко піддаються чужому впливу.
+                          </p>
+
+				        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/rak.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				        <span>Рак</span>
+
+                        <p>
+                            Девіз: "Роби, як я, адже краще всеодно не зробиш!".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">			
+
+				        <div class="profile_znak">
+                            
+					      <p>
+                           Це чутливі, вразливі та емоційні люди, які дуже легко піддаються настрою. Романтичні 
+                           натури з живою уявою, а також вірні друзі, які одразу прийдуть на допомогу. Раки до
+                           своєї мети рухаються повільно, але впевнено, передбачаючи всі можливі перешкоди, а в найнесподіваніший
+                           момент захоплюють здобич і вже не випускають зі своїх рук.
+                          </p>
+				        
+                        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			        <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/sco.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				       <span>Скорпіон</span>
+
+                        <p>
+                            Девіз: "Якщо робити, то з розмахом!".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					       <p>
+                            Зустрівши Скорпіона, можете бути впевнені - з ним буде цікаво, але майже завжди небезпечно!
+                            У кожному разі, це не та людина, в присутності якої можна розслабитися. Любить азарт, емоційну гру
+                            і гострі відчуття.
+                           </p>
+
+				        </div>
+                        
+			        </div>
+
+		        </div>
+
+	        </div>
+
+        </section>
+
+         <section class="container">
+
+	        <div class="category_container">
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/ove.jpg" class="zz_image" alt="" />
+
+			        <div class="profile_zz">
+
+				        <span>Овен</span>
+
+                        <p>
+                           Девіз: "Там де інфші гальмують я тисну на газ".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					      <p>
+                            Енергія і невтомність Овнів стали легендарними так само, як і їх упертість,
+                            вони ніколи не поступляться іншим і будуть стояти на своєму, навіть, якщо вони неправі.
+                            Дуже опитимістичні, і це не дасть їм скласти руки, навіть, у найважчик життєвих ситуаціях.
+                          </p>
+
+				        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/lev.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				        <span>Лев</span>
+
+                        <p>
+                           Девіз: "Навіщо вам сонце, якщо я поруч?!".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">			
+
+				        <div class="profile_znak">
+                            
+					      <p>
+                            Народжені під чим знаком люди: енергійні, незалежні, безстрашні та сильні духом, але й уперті, пихаті
+                            і горді. Гордий Лев дуже вразливий, його ображає, якщо ви не поважаєте його мужність і щедрість. Це -
+                            природжений лідер, який хоче бути центром уваги і має потребу в оплесках і схваленні.
+                          </p>
+				        
+                        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			        <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/str.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				       <span>Стрілець</span>
+
+                        <p>
+                            Девіз: "Найкраща відпустка - подорож!".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					       <p>
+                            Народжених під цим знаком людей притягує небезпека, вони обожнюють фізичний і емоційний ризик. 
+                            Балакучі і екстравагантні. У душі це марнотрати. Ці люди завжди щасливі та веселі, люблять подорожувати. 
+                            Стрілець знає, що таке народитись в сорочці і як спіймати удачу за хвіст, через що у нимх багато заздрісників.
+                            Стрілець завжди намагаєть справляти гарне і сильне враження про себе.
+                           </p>
+
+				        </div>
+                        
+			        </div>
+
+		        </div>
+
+	        </div>
+
+        </section>
+
+         <section class="container">
+
+	        <div class="category_container">
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/koz.jpg" class="zz_image" alt="" />
+
+			        <div class="profile_zz">
+
+				        <span>Козеріг</span>
+
+                        <p>
+                            Девіз: "Я завжли правий!".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					      <p>
+                            Козеріг - наполегливий, амбіційний, практичний і розважливий представник зодіакального світу.
+                            Може бути різким в критиці і висловлюваннях, але все ж занадто розумний, щоб створювати собі
+                            проблеми і шукати ворогів. Він вміло маніпулює почуттями оточуючих, і якщо ти вважаєш, що Козеріг 
+                            дає комусь шанс вирватися вперед, то будь впевнений. що до фінішу прийде тільки розумник-Козеріг.
+                            Володіють терпінням і з неймовірним завзяттям завжди досягають своїх цілей. 
+                          </p>
+
+				        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			       <img src="../horoscope/img/star.png"  alt="" />
+			       <img src="../horoscope/img/tel.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				        <span>Телець</span>
+
+                        <p>
+                            Девіз: "Людина без прємних манер, як автомобіль без бензину..."
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">			
+
+				        <div class="profile_znak">
+                            
+					      <p>
+                           У народжених під сузір'ям Терезів добре серце, мрійлива натура, спокійний характер, вони потребують
+                           гармонії і спокою, не терплять конфліктів і тому завжди проявляють свою стриманість та дипломатичність.
+                          </p>
+				        
+                        </div>
+
+			        </div>
+
+		        </div>
+
+		        <div class="content">
+
+			        <img src="../horoscope/img/star.png" alt="" />
+			       <img src="../horoscope/img/dev.jpg" class="zz_image" alt="" />
+
+
+			        <div class="profile_zz">
+
+				       <span>Діва</span>
+
+                        <p>
+                            Девіз: "Незважаючи на скромний вигляд, я сумую за оплесками".
+                        </p>
+
+			        </div>
+
+			        <div class="wrapper">	
+
+				        <div class="profile_znak">
+
+					       <p>
+                            Добродушні, трошки наївні і ввічливі, цінують розумних і освічених людей. Діви дуже вірні і щирі
+                            друзі, але ставши ворогом, завжди посадять тебе на лавку переможених. Більшість Дів привабливі 
+                            зовні і могли б бути неймовірно чарівними, якби захотіли. Але людям цього знаку властиво триматся
+                            в тіні, не привертати до себе увагу, і тому їх часто недооцінюють, особливо ті, хто їх погано знає.
+                           </p>
+
+				        </div>
+                        
+			        </div>
+
+		        </div>
+
+	        </div>
+
+        </section>
+
+        <div id="love">
+            <h2 style="display: flex; justify-content: center;">Незнаєте чи сувмісні Ви з коханою людиною? Тоді &nbsp; <a href="https://www.citykey.com.ua/test-na-sumisnist-znakiv-zodiaku/" target="_blank">ТИСНИ СЮДИ</a> &nbsp; і дізнавайся чи твоя це доля!</h2>
+         </div>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <h2 style="color: white; text-align: center;">Ми студентки Вінницького національного технічного університету</h2>
+      
+        <div style="display: flex; justify-content: center;">
+
+            <p style="margin-left: 20px; margin-right: 20px; color: white; ">
+                Створена веб-сторінка була розроблена для участі у конкурсі та можливості продемонструвати наші здібності.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
